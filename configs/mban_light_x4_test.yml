@@ -1,0 +1,35 @@
+model: 'mban'
+## parameters for plain
+scale: 4
+rgb_range: 255
+colors: 3
+m_elan: 12
+c_elan: 54
+n_share: 0
+r_expand: 2
+act_type: 'relu'
+window_sizes: [4,8,16]   #[4, 8, 16]
+pretrain:
+
+
+## parameters for model training
+patch_size: 192   # 256
+batch_size: 1   # 64
+data_repeat: 10
+data_augment: 1
+
+log_path: ".\\experiments"
+log_name:
+
+## hardware specification
+gpu_ids: [1]
+threads: 1
+
+## data specification
+data_path: 'D:\\yyj\\proC\\dataset'
+eval_sets: ['Set5', 'Set14', 'B100', 'Urban100']
+#  ['test']
+  # ['Set5', 'Set14', 'B100', 'Urban100', 'Div2k']
+  #['Set5', 'Set14', 'B100', 'Urban100']
+# eval_sets: ['Set5', 'Set14', 'B100', 'Urban100', 'Manga109']
+output_folder: 'test_results\\'
